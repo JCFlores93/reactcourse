@@ -4,16 +4,30 @@ import PropTypes from 'prop-types'
 
 class Media extends Component {
 
-    /*constructor(props) {
-        super(props)
+    //Manejando estados para cambiar una variable
+    state = {
+        author: 'Jean Carlo Flores Carrasco'
+    }
+
+    //constructor(props) {
+        //super(props)
         //Ahora está enlazado con el componente
-        this.handleClick = this.handleClick.bind(this)
-    }*/
+        //this.handleClick = this.handleClick.bind(this)
+
+        //Manejando estados para cambiar una variable
+        /*this.state = {
+            author: props.author
+        }*/
+    //}
 
     handleClick = (event) => {
         event.preventDefault()
         console.log(event)
         console.log(this.props.title)
+        //modificar un estado del componente
+        this.setState({
+            author: 'Ricardo Celis'
+        })
     }
 
     render() {
@@ -37,7 +51,7 @@ class Media extends Component {
                     />
                     <p>Hola Mundo desde media.js</p>
                     <h3 className="Media-title">{this.props.title}</h3>
-                    <p className="Media-author">{this.props.author}</p>
+                    <p className="Media-author">{this.state.author}</p>
                 </div>
             </div>
         )
