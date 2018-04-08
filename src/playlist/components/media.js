@@ -1,8 +1,9 @@
-import React, { Component } from 'react'
+//import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import './media.css'
 import PropTypes from 'prop-types'
 
-class Media extends Component {
+class Media extends PureComponent {
 
     //Manejando estados para cambiar una variable
     state = {
